@@ -1,0 +1,162 @@
+.cards {
+    // overflow: hidden;
+    flex-direction: column;
+    color: #EEE;
+    padding: 1rem;
+    align-items: center;
+
+
+    //styles for specific sections
+    &.faq-text {
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem 1rem;
+            font-size: 1.4rem;
+        }
+
+        color: black;
+
+        .card {
+
+            padding: 1rem;
+            font-size: 1.5rem;
+            background: none;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.4s ease-in;
+
+            &.animate {
+                opacity: 1;
+            }
+
+
+            @media screen and (min-width:768px) {
+                padding: 1rem 4rem;
+            }
+
+            figcaption h3 {
+                text-align: center;
+            }
+
+            &-text p:not(:last-of-type) {
+                margin-bottom: 1.3rem;
+            }
+
+            figure img {
+                width: 200px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            // &.order-first-at-mobile{
+            //     order:-1;
+            //     @media screen and (min-width:1100px) {
+            //         order: 0;
+            //     }
+            // }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 15rem 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex: 1;
+    }
+
+    //default style for landing page
+    .card {
+
+
+        background-color: #202268;
+        width: 80%;
+        max-width: 350px;
+        min-height: 290px;
+        padding: 4rem;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        opacity:0;
+        transform: translateY(100px);
+        transition: opacity 0.5s ease-in, transform 0.6s ease-out;
+
+        &.animate{
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &.card-transparent {
+            background-color: transparent;
+            color: black;
+        }
+
+        &.shadow-desktop {
+            @media screen and (min-width: 1100px) {
+                box-shadow: 14px 15px 30px rgba(0, 0, 0, 0.199);
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            margin: .5rem;
+            flex-basis: 50%;
+            min-height: 350px;
+            font-size: 1.5rem;
+        }
+
+        &:not(:first-child) {
+            margin-top: 3.5rem;
+
+            @media screen and (min-width: 768px) {
+                margin-top: .5rem;
+            }
+        }
+
+        &.order-first-at-mobile {
+            order: -1;
+
+            @media screen and (min-width: 1100px) {
+                order: 0;
+            }
+        }
+
+        &.order-last-at-mobile {
+            order: 1;
+
+            @media screen and (min-width: 1100px) {
+                order: 0;
+            }
+        }
+
+
+    }
+
+    figcaption h3 {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    &-text {
+        font-size: 1.5rem;
+    }
+
+    .single-row {
+        @media screen and (min-width: 768px) {
+            max-width: 71rem;
+            flex-basis: 100%;
+        }
+
+        @media screen and (min-width:1100px) {
+            max-width: 350px;
+            flex-basis: 100%;
+        }
+
+
+    }
+}
+
+.card-icon-small {
+    height: 70px;
+}

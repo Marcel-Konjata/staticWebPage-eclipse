@@ -1,0 +1,28 @@
+//color variables
+$blue1-text: #0CD3E9;
+$blue2-text: #43A0F2;
+$purple-text: #D016D6;
+
+
+a {
+    text-decoration: none;
+}
+
+.new-line {
+    display: block;
+}
+
+.text {
+    &-blue1 {
+        color: $blue1-text;
+    }
+
+    &-blue2 {
+        color: $blue2-text;
+    }
+
+    &-purple {
+        color: $purple-text;
+    }
+}
+

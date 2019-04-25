@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+ul {
+    list-style: none;
+
+}
+
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(-90deg, rgb(5, 31, 163), rgb(68, 11, 168), rgb(104, 22, 212) 95%) no-repeat;
+    background-size: cover;
+    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.black-bg {
+    background-color: black;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.padding-top-15{
+    padding-top: 15rem;
+}
+.padding-bottom-15{
+    padding-bottom: 15rem;
+}
+
+.padding-top-8{
+    padding-top: 8rem;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+
+@import 'components/navigations';
+@import 'components/animations';
+@import 'sections/hero';
+@import 'components/typography';
+@import 'sections/overview';
+@import 'components/banner';
+@import 'sections/main-content';
+@import 'components/cta-box';
+@import 'components/buttons';
+@import 'sections/footer';
+@import 'components/animatedEthereum';
+@import 'components/cards';
+

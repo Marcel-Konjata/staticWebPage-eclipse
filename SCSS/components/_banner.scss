@@ -1,0 +1,115 @@
+.banner {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-content: center;
+        padding: 2.5rem;
+        max-width: 1194px;
+        margin: 0 auto;
+    }
+
+    
+
+    &-img-container {
+
+        @media screen and (min-width: 768px) {
+            width: 45%;
+            display: flex;
+        }
+        opacity: 0;
+        &:nth-child(odd){
+            transform: translateX(-200px);
+        }
+        &:nth-child(even){
+            transform: translateX(200px);
+        }
+        transition: transform .7s ease-out, opacity .4s ease-out;
+    }
+
+
+    &-animation-trigger .banner-img-container{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+
+    &-img {
+        display: block;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            margin: auto;
+
+        }
+
+        @media screen and (min-width:1154px) {
+            &.bigger-height{
+                width: 40%; //there is no fixed height so height property doesnt take effect, it is fast way to deploy but less maintainable
+                            // always can be used pixel value or resize with another class name
+            }
+            &.bigger-width{
+                width:100%;
+            }
+        }
+
+    }
+
+    &-content {
+        text-align: center;
+        padding: 5rem;
+        opacity: 0;
+        transition: opacity .5s .5s ease-in;
+
+        @media screen and (min-width: 768px) {
+            width: 55%;
+        }
+
+    }
+
+    &-animation-trigger .banner-content{
+        opacity: 1;
+    }
+
+    &-text {
+        font-size: 1.8rem;
+        padding: 1rem;
+
+        @media screen and (min-width: 1154px) {
+            font-size: 2.2rem;
+        }
+
+        &-heading {
+            font-size: 3rem;
+            font-weight: 400;
+
+            @media screen and (min-width: 1154px) {
+                font-size: 5rem;
+            }
+
+        }
+
+        &-subheading {
+            font-size: 2.3rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+
+            @media screen and (min-width: 1154px) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    @media screen and (min-width:1154px) {
+
+        &-content:nth-child(odd) .banner-text {
+            text-align: left;
+            padding: 3rem 2rem 5rem 5rem;
+        }
+
+        &-content:nth-child(even) .banner-text {
+            text-align: right;
+            padding: 3rem 5rem 5rem 2rem;
+        }
+    }
+}

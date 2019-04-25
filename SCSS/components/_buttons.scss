@@ -1,0 +1,73 @@
+.btn{
+    text-decoration:none;
+    padding: 1rem 2rem;
+    display:block;
+    
+    &_glowing{
+      background:#051565;
+        width: 50%;
+        min-width: 170px;
+      position: relative;
+      font-size: 1.2rem;
+      color:white;
+      overflow:hidden;
+      @media screen and (min-width:750px) {
+        font-size: 1.6rem;
+    }
+      @media screen and (min-width:1500px) {
+        font-size: 2rem;
+    }
+      
+      
+      &--top-border{
+        width:100%;
+        
+        height: 3px;
+        position:absolute;
+        top:0;
+        left:0;
+        background:linear-gradient(to right , #000592, #04DFE6, #000592);
+        animation: horizontalBorder 1s linear infinite;
+        
+      }
+       &--bot-border{
+          width:100%;
+        height: 3px;
+        position:absolute;
+        bottom:0;
+        left:0;
+        background:linear-gradient(to right , #000592, #04DFE6, #000592);
+         animation: horizontalBorderReverse 1s linear infinite;
+      }
+       &--left-border{
+          width:3px;
+        height: 100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+        background:linear-gradient(to top , #000592, #04DFE6, #000592);
+        animation: verticalBorderReverse 1s 1.5s linear infinite;
+        
+      }
+       &--right-border{
+          width:3px;
+        height: 100%;
+        position:absolute;
+        bottom:0;
+        right:0;
+        background:linear-gradient(to top , #000592, #04DFE6, #000592);
+        animation: verticalBorder 1s .5s linear infinite;
+         
+      }
+    }
+    
+  }
+
+  .btn_glowing:hover .btn_glowing--bot-border,
+  .btn_glowing:hover .btn_glowing--top-border,
+  .btn_glowing:hover .btn_glowing--left-border,
+  .btn_glowing:hover .btn_glowing--right-border{
+    
+        animation-play-state: paused;
+    
+   }

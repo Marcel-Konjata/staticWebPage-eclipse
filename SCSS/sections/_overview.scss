@@ -1,0 +1,30 @@
+.overview {
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    position: relative;
+
+    &::after {
+
+        content: '';
+        position: absolute;
+        bottom: -30rem;
+        right: 0;
+        height: 30rem;
+        width: 100%;
+        background-image: url(../images/after.svg);
+        z-index: 2;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 20% 0%;
+
+        @media screen and (min-width: 574px) {
+            background-image: url('../../images/svg/after-tablet.svg');
+        }
+
+        @media screen and (min-width:1245px) {
+            background-image: url('../../images/svg/after-desktop.svg');
+        }
+    }
+
+   
+}

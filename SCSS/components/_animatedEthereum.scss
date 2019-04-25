@@ -1,0 +1,86 @@
+.animated-ehtereum{
+    display: none;
+    &.do-not-display{
+        display: none;
+    }
+    @media screen and (min-width:1200px) {
+        display: block;
+        width: 50%;
+        .circle{
+            background-image:url(../../images/ring.png);
+            width:480px;
+            height: 480px;
+            background-size: cover;
+            margin: 0 auto;
+            position: relative;
+
+            @media (min-width:1680px) {
+                width: 600px;
+                height: 600px;
+            }
+
+            &-1{
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width:65%;
+                height:65%;
+                transform: translate(-55%,-50%);
+                background-image: url('../../images/outer-rotate.png');
+                background-size: 100%;
+                z-index: 2;
+                background-repeat: no-repeat;
+                background-position: center ;
+                animation: HartRotate 10s linear infinite;
+            }
+            &-2{
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width:65%;
+                height:65%;
+                transform: translate(-55%,-50%);
+                background-image: url('../../images/inner-rotate.png');
+                background-size: 100%;
+                z-index: 2;
+                background-repeat: no-repeat;
+                background-position: center; 
+                animation: HartRotate2 10s linear infinite;
+            }
+            &-3{
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width:50%;
+                height:50%;
+                transform: translate(-56%,-50%);
+                background-image: url('../../images/hartofethereum.png');
+                background-size: 100%;
+                z-index: 2;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+    }
+}
+
+
+@keyframes HartRotate {
+    0%{
+        transform: translate(-55%,-50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-55%,-50%) rotate(360deg);
+    }
+}
+@keyframes HartRotate2 {
+    0%{
+        transform: translate(-55%,-50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-55%,-50%) rotate(-360deg);
+    }
+}
